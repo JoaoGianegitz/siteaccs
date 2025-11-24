@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ===== HERO PRINCIPAL ===== */
+.foto-pagina-inicial {
+    background-image: url(img/fotoescurecida.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.h1 {
+    font-family: Julius Sans One;
+}
+/* ===== TOPO ===== */
+.barra-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7) ;/*Define a cor como preto/transparente */
+    padding: 10px 50px;
+    box-sizing: border-box; /*Difine que o limite da borda não ultrapasse 100% ou seja a borda*/
+    z-index: 10; /*Define que ficara sobre qualquer objeto */
+}
+
+/* ===== LOGO ===== */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.marca img {
+    border-radius: 5px;
+    height: 50px;
+    width: auto;
+}
+
+/* ===== NAV ===== */
+.barra-topo nav{
+    display: flex;
+    gap: 30px;
+}
+
+.barra-topo nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.barra-topo nav a:hover{
+    color: #00a69c;
+    transform: scale(1.05);
+    text-shadow: 0px 0px 16px rgba(255, 255, 255, 0.31);
+}
+
+/* ===== ESTILO DO MENU MOBILE ===== */
+
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color: #00a69c;
+    font-size: 40px;
+    float:right;
+}
+
+.navega-mobile{
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.navega-mobile.abrir-menu{
+    width: 70%;
+}
+
+.navega-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.navega-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.navega-mobile .btn-fechar i{
+    color: #00a69c;
+    font-size: 30px;
+}
+
+.navega-mobile nav ul{
+    text-align: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navega-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-size: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.navega-mobile nav ul li a:hover{
+    background-color: #00a69c;
+    color: black;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.72);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+/* ===== TEXTO CENTRAL ===== */
+.conteudo-principal {
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+/*========== Divisão de body ==============*/
+body {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Container geral da seção */
+.secao-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Parte do conteúdo textual */
+.secao-conteudo {
+    flex: 1;
+}
+
+.secao-conteudo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.secao-conteudo p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botão opcional */
+a{
+    text-decoration: none;
+    color: #00a69c;
+}
+section div button a{
+    text-decoration: none;
+    color: white;
+}
+.botao {
+    width: 120px;
+    font-size: 20px;
+    background-color: #121F28;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.botao:hover {
+    background-color: #00a69c;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 16px 0px black;
+}
+
+/* Parte da imagem */
+.secao-img {
+    flex: 1.2;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    border-radius: 10px;
+}
+
+.secao-img img {
+    max-width: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .secao-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.secao-conteudo-central {
+    justify-content: center;
+}
+
+section {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#atividades .paragrafo-coral1 {
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.grade-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grade-fotos img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grade-fotos .foto-grande {
+    grid-column: span 2;
+    width: 100%;
+    height: 350px;
+}
+
+.texto-sobre {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==== ESTATISTICA ==== */
+
+.estatistica .secao-img{
+    width: 280%;
+    margin-left: -870px;
+}
+
+/* ===== PÁGINA CONTATO ===== */
+.cabecalho-contato {
+    background-image: url(img/Fotofundo.png);
+    background-size: cover;
+    background-position: center -150px;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.texto-contato {
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.icone-contato {
+    display: flex;
+    justify-content: left;
+    width: 60%;
+    height: auto;
+}
+/* ===== SEÇÃO CONTATO ===== */
+.secao-contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 10%;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* ===== INFORMAÇÕES DA ACCS ===== */
+.informacoes-contato {
+    background-color: #c0c0c0;
+    padding: 40px;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 280px;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+}
+
+.informacoes-contato h2,
+.informacoes-contato h3 {
+    font-family: "Poppins", sans-serif;
+    color: #121F28;
+}
+
+.informacoes-contato p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    text-decoration: underline;
+    text-decoration-color: #00a69c;
+}
+
+.direitos {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario {
+    flex: 1;
+    min-width: 320px;
+}
+
+.formulario h2 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    color: #121F28;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    width: 120px;
+    background-color: #121F28;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #00a69c;
+    box-shadow: 0px 0px 16px 0px black;
+}
+.banner-contato {
+    display: flex;
+    justify-content: flex-start; /* mantém o texto à esquerda */
+    align-items: center;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 90px;
+    height: 100%;
+    padding-left: 60px;
+}
+
+/*====== GALERIA======*/
+.galeria {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    padding: 10px;
+}
+
+.galeria img {
+    object-fit: cover; /* mantém proporção das imagens */
+    width: 800px;
+}
+
+.faixa {
+    display: flex;
+    animation: mover 80s linear infinite;
+}
+
+.faixa img {
+    width: 800px;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* move metade do total duplicado */
+    }
+}
+/*@keyframes mover {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}*/
+
+
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .secao-contato {
+        flex-direction: column;
+    }
+
+    .formulario, .informacoes-contato {
+        width: 100%;
+    }
+
+    button {
+        align-self: center;
+    }
+}
+.diretoria {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin: 40px 0;
+    line-height: 1.8;
+}
+
+.diretoria h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.diretoria p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.diretoria strong {
+    color: #000;
+}
+.grade-fotos2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+    grid-template-rows: repeat(2, 1fr);    /* 2 linhas */
+    gap: 15px;
+    width: 75%;
+    margin: 0 auto;                        /* centraliza a grade */
+}
+
+.grade-fotos2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                     /* mantém proporção */
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px){
+
+    .btn-abrir-menu {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 100;
+    }
+    .secao-conteudo esquerda{
+        flex-direction: column;
+        text-align: center;
+    }
+    .barra-topo{
+        display: none;
+    }
+    .botao{
+        display: block;
+    }
+    .secao-img{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .estatistica .secao-img{
+        width: 220%;
+        margin-left: -180px;
+    }
+
+    .secao-contato {
+        padding: 60px 4%;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .secao-contato a{
+        font-size: 14px;
+    }
+
+    .cabecalho-contato {
+        background-image: url(img/Fotofundo.png);
+        background-size: cover;
+        background-position: center -195px;
+        width: 100%;
+        height: 50vh;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .informacoes-contato {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+}/*Faz o site se ajustar ao tamanho da tela sem deixar cortar o conteudo*/

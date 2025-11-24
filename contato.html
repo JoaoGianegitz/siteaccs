@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ACCS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="menu.js" defer></script>
+</head>
+<body>
+
+<header class="cabecalho-contato">
+    <div class="barra-topo">
+        <div class="marca">
+            <img class="marca" src="img/logotop.png">
+        </div>
+        <nav class="navega">
+            <a href="index.html">Início</a>
+            <a href="subpagsobre.html">Sobre</a>
+            <a href="Estatística.html"> Estatística</a>
+            <a href="galeria.html"> Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <div class="btn-abrir-menu" id="btn-menu">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div class="navega-mobile" id="navega-mobile">
+        <div class="btn-fechar">
+            <i class="bi bi-x-circle"></i>
+        </div><!--botao-fechar-menu-->
+
+        <nav>
+            <ul><li><a href="index.html">Início</a></li></ul>
+            <ul><li><a href="subpagsobre.html">Sobre</a></li></ul>
+            <ul><li><a href="Estatística.html"> Estatística</a></li></ul>
+            <ul><li><a href="galeria.html"> Galeria</a></li></ul>
+            <ul><li><a href="contato.html">Contato</a></li></ul>
+        </nav>
+
+    </div><!--menu-mobile-->
+
+    <div class="overlay-menu" id="overlay-menu"></div>
+
+
+    <div class="banner-contato">
+        <h2 style="align-items: ce">Fale Conosco</h2>
+    </div>
+</header>
+
+
+    <section class="secao-contato">
+        <div class="informacoes-contato">
+            <strong><h2>Localização</h2>
+            <p><a href="https://www.google.com/maps/place/Associação+Cultural+Maestro+Cícero+Siqueira/@-22.4086609,-50.5866148,2872m/data=!3m1!1e3!4m6!3m5!1s0x9495051720a28bf7:0x68f9566f11134ae9!8m2!3d-22.4115544!4d-50.5809599!16s%2Fg%2F11fm735v6c?entry=ttu">
+                Rua Armando Sales de Oliveira, 345 – Centro</br>
+                CEP: 19700-031, Paraguaçu Paulista – SP
+            </a></p>
+
+            <h3>Contato</h3>
+            <p><a href="mailto:acmcspp@gmail.com">✉ acmcspp@gmail.com </a><br></p>
+
+            <h3>Siga-nos</h3>
+            <p><a href="https://www.facebook.com/coralcantolivre.coral?locale=pt_BR"> 🎭 Coral Canto Livre</a>
+            </p>
+
+            <h3>Fundação</h3>
+            <p>📅 14 de fevereiro de 2016</p> </strong>
+        </div>
+
+        <div class="formulario"> <!-- Aqui nos temos div que contém os dados para um formulário-->
+            <h2>Formulário de Contato</h2>
+            <form action="joao.gianegitz@gmail.com" method="post"> <!-- Form action é como se fosse o endereço de envio. Já method é como os dados são enviados, neste caso ele envia de forma oculta no corpo do email-->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required> <!-- Aqui temos o tipo de inserção, tipo de texto, id para identificar css, nome da variavel a ser enviada, place holder é o texto de ajuda que fica em cor mais clara-->
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required> <!-- Required tem como base deixar o campo obrigatorio-->
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea> <!-- rows tem como base aqui definir o tamanho da caixa de texto-->
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Associação Cultural Maestro Cícero Siqueira – Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
